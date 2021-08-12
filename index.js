@@ -176,12 +176,12 @@ const addEmployee = () => {
                 console.log(employee);
             }
 
-            teamArrpush(employee);
+            teamArr.push(employee);
 
             if (confirmAddEmployee) {
                 return addEmployee(teamArr);
             } else {
-                return teamArr
+                return teamArr;
             }
         })
 };
