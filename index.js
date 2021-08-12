@@ -1,3 +1,5 @@
+const generateHTML = require('./src/generateHTML');
+
 // importing all constructors
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
@@ -185,3 +187,26 @@ const addEmployee = () => {
             }
         })
 };
+
+const writeFile = data => {
+    fs.writeFile('./dist/index.html', data, err => {
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            console.log("Your html has been successfully created!")
+        }
+    })
+};
+
+addManager()
+    .then(addEmployee)
+    .then(teamArray => {
+        return generateHTML(teamArray);
+    })
+    .then(pageHTML => {
+        return writeFile(pageHTML);
+    })
+    .catch(err => {
+        console.log(err);
+    });
