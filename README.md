@@ -28,3 +28,6 @@ THEN I exit the application, and the HTML is generated
 To use the application, run the "node index.js" command in your CL and follow the prompts
 example:
 ![image](https://user-images.githubusercontent.com/79550591/129265698-5fb9bdc4-25ba-4ff9-a7fc-252afe547fa7.png)
+
+![image](https://user-images.githubusercontent.com/79550591/129265752-1601d63e-547b-406f-9fde-4e16257540f7.png)
+
